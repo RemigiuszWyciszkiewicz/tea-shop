@@ -1,0 +1,59 @@
+
+<coin-market-page-loader [isLoading]="loading" [error]="transactionError">
+  <ng-template aumsDigitalPageContentTpl>
+    <div class="add-container">
+      <coin-market-button class="mb-5" styleElement="secondary"  text="DODAJ PRODUKT" (clickEvent)="add()" >
+      </coin-market-button>
+    </div>
+
+    <ng-container *ngIf="products">
+      <coin-market-card *ngIf="products.length; else noDataStatement">
+        <coin-market-card-body>
+
+
+
+
+          <table class="table">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">Nazwa</th>
+                <th scope="col">Ilość</th>
+                <th scope="col">Opis</th>
+                <th scope="col">Cena</th>
+                <th scope="col">Waga</th>
+                <th scope="col">Adres zdjęcia</th>
+                <th scope="col">Kategoria</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products | paginate: { itemsPerPage: 10, currentPage: currentPage }">
+                <td>{{ product.name | titlecase }}</td>
+                <td>{{ product.amount }}</td>
+                <td>{{ product.description  }}</td>
+                <td>{{ product.price  }} zł</td>
+                <td>{{ product.weight  }}</td>
+                <td>{{ product.imageUrl }}</td>
+                <td>{{ product.category }}</td>
+                <td>      <coin-market-button styleElement="link"  text="EDYTUJ" (clickEvent)="edit(product._id)" >
+                </coin-market-button></td>
+                <td>      <coin-market-button  styleElement="link" text="USUŃ" (clickEvent)="delete(product._id)" >
+                </coin-market-button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-center align-items-center">
+            <pagination-controls (pageChange)="paginationChange($event)"></pagination-controls>
+          </div>
+        </coin-market-card-body>
+      </coin-market-card>
+    </ng-container>
+  </ng-template>
+</coin-market-page-loader>
+
+<ng-template #noDataStatement>
+  <div class="no-data-label">
+   Brak produktów w sklepie.
+  </div>
+</ng-template>

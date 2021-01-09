@@ -1,0 +1,32 @@
+<coin-market-card>
+  <coin-market-card-body [formGroup]="formGroup">
+    <div class="preview">
+      <div class="image">
+        <img class="article-image" alt="article_url" [src]="product.imageUrl" />
+      </div>
+
+      <div class="details">
+        <div class="label">Nazwa</div>
+        <div class="value">{{ product.name }}</div>
+        <div class="label">Opis</div>
+        <div class="value">{{ product.description }}</div>
+        <div class="label">Kategoria</div>
+        <div class="value">{{ product.category }}</div>
+        <div class="label">Cena</div>
+        <div class="value">{{ product.price }} zł</div>
+        <div class="label">Waga</div>
+        <div class="value">{{ product.weight }}</div>
+        <div class="label">Kalorie</div>
+        <div class="value">{{ product.kcal }}</div>
+        <div class="label">Dostawa w ciągu</div>
+        <div class="value">	1-4 dni robocze</div>
+      </div>
+    </div>
+
+    <div class="buy">
+      <div class="label">Podaj ilość:</div>
+      <coin-market-input type="number" placeholder="ILOŚĆ" formControlName="amount" class="inputamount"></coin-market-input>
+      <coin-market-button (clickEvent)="buy()" text="DODAJ DO KOSZYKA"> </coin-market-button>
+    </div>
+  </coin-market-card-body>
+</coin-market-card>

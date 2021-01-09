@@ -1,0 +1,16 @@
+<div [formGroup]="formGroup">
+  <coin-market-input label="Email" placeholder="Email" formControlName="email"></coin-market-input>
+  <coin-market-input label="Hasło" placeholder="Hasło" formControlName="password" type="password"></coin-market-input>
+  <coin-market-input
+    label="Powtórz hasło"
+    placeholder="Powtórz hasło"
+    formControlName="passwordConfirmation"
+    type="password"
+  >
+  </coin-market-input>
+  <coin-market-input label="Nazwa" placeholder="Nazwa" formControlName="name"></coin-market-input>
+  <div class="mt-3 d-flex justify-content-between">
+    <coin-market-button (clickEvent)="createUser()" text="Utwórz konto"> </coin-market-button>
+    <coin-market-button (clickEvent)="showLoginForm.emit()" text="Zaloguj"> </coin-market-button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+@import 'src/app/utils/styles/variables';
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.702);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+
+  .primary-color {
+    color: $color-primary;
+  }
+
+  a {
+    color: $color-primary;
+  }
+}

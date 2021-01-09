@@ -1,0 +1,33 @@
+.buy {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .label {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .inputamount {
+    margin-right: 1rem;
+  }
+}
+
+.details {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 7rem max-content;
+  grid-row-gap: 1rem;
+}
+
+.preview {
+  display: flex;
+}
+
+.article-image {
+  width: 19rem;
+}
+
+.value {
+  font-size: 1.2rem;
+}

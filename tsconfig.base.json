@@ -1,0 +1,23 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@candy-shop/feature/profile": ["src/app/feature/profile/index.ts"],
+      "@candy-shop/feature/start-page": ["src/app/feature/start-page/index.ts"],
+      "@candy-shop/ui/forms": ["src/app/ui/forms/index.ts"],
+      "@candy-shop/*": ["src/app/*"]
+    }
+  }
+}

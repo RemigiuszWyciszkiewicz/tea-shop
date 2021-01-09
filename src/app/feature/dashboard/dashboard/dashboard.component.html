@@ -1,0 +1,25 @@
+
+<div class="shop" >
+<coin-market-card class="card" *ngFor="let item of filteredProducts" (click)="productPreview(item)">
+  <coin-market-card-body>
+   <img class="article-image" alt="article_url" [src]="item.imageUrl" />
+
+    <div class="article-content">
+      <div class="article-header">
+        <div class="name-price">
+          <div class="name">
+            {{item.name}}
+          </div>
+          <div class="price">
+            {{item.price}} zł
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </coin-market-card-body>
+</coin-market-card>
+</div>

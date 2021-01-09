@@ -1,0 +1,35 @@
+<ng-container *ngIf="products">
+  <coin-market-card *ngIf="products.length; else noDataStatement">
+    <coin-market-card-body>
+      <table class="table">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">Nazwa</th>
+            <th scope="col">Ilość</th>
+            <th scope="col">Opis</th>
+            <th scope="col">Cena</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products | paginate: { itemsPerPage: 10, currentPage: currentPage }">
+            <td>{{ product.name | titlecase }}</td>
+            <td>{{ product.amount }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }} zł</td>
+            <td><i class="fas fa-trash delete-icon" (click)="removeOrder(product)"></i></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center align-items-center">
+        <pagination-controls (pageChange)="paginationChange($event)"></pagination-controls>
+      </div>
+
+      <div class="order-summary">SUMA: {{ totalOrderValue }} zł</div>
+    </coin-market-card-body>
+  </coin-market-card>
+</ng-container>
+
+<ng-template #noDataStatement>
+  <div class="no-data-label">Brak produktów w koszyku.</div>
+</ng-template>

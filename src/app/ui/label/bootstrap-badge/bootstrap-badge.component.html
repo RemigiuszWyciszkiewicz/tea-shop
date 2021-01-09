@@ -1,0 +1,7 @@
+<ng-template #badgeContent>
+  <ng-content></ng-content>
+</ng-template>
+
+<span class="badge badge-{{ variation }} " [class.interactive]="emitEventOnClick" (click)="clickEvent.emit()">
+  <ng-container *ngTemplateOutlet="badgeContent"></ng-container>
+</span>

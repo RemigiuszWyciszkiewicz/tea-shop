@@ -1,0 +1,19 @@
+nb-user ::ng-deep {
+  .user-picture {
+    border: none;
+  }
+  .info-container {
+    margin-left: 0;
+  }
+  .user-name {
+    font-family: 'Nunito Sans';
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.user-profile-menu-container {
+  padding-left: 1.2rem;
+  border-left: 1px solid white;
+  border-left-color: rgba(255, 255, 255, 0.2) !important;
+}

@@ -1,0 +1,15 @@
+<nb-card
+  [ngStyle]="minHightWhileLoading"
+  [nbSpinner]="loading"
+  [nbSpinnerStatus]="spinnerStatus"
+  [nbSpinnerMessage]="spinnerMessage"
+  nbSpinnerSize="giant"
+  nbSpinnerStatus="success"
+>
+  <nb-card-header *ngIf="cardHeaderComponent" [class.loading-status]="loading">
+    <ng-content select="coin-market-card-header"></ng-content>
+  </nb-card-header>
+  <nb-card-body [class.loading-status]="loading">
+    <ng-content select="coin-market-card-body"></ng-content>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,58 @@
+<coin-market-modal-card (cancel)="cancel()" [modalTitle]="transactionType | uppercase" [hideFooter]="true" modalSize="auto">
+  <coin-market-modal-card-body>
+    <div class="grid mb-3" [formGroup]="formGroup">
+      <div class="label">
+        Nazwa:
+      </div>
+      <div >
+        <coin-market-input  formControlName="name"></coin-market-input>
+      </div>
+      <div class="label">
+        Opis:
+      </div>
+      <div >
+        <coin-market-input  formControlName="description"></coin-market-input>
+      </div>
+      <div class="label">
+        Ilość:
+      </div>
+      <div >
+        <coin-market-input type="number" formControlName="amount"></coin-market-input>
+      </div>
+      <div class="label">
+        Cena:
+      </div>
+      <div >
+        <coin-market-input type="number" formControlName="price"></coin-market-input>
+      </div>
+      <div class="label">
+        Adres zdjęcia:
+      </div>
+      <div >
+        <coin-market-input  formControlName="imageUrl"></coin-market-input>
+      </div>
+      <div class="label">
+       KCAL:
+      </div>
+      <div >
+        <coin-market-input type="number" formControlName="kcal"></coin-market-input>
+      </div>
+      <div class="label">
+        Waga:
+      </div>
+      <div >
+        <coin-market-input formControlName="weight"></coin-market-input>
+      </div>
+      <div class="label">
+        Kategoria:
+      </div>
+      <div >
+        <coin-market-input formControlName="category"></coin-market-input>
+      </div>
+
+    </div>
+
+    <coin-market-button (click)="save()" [text]="'Zapisz'"></coin-market-button>
+    <coin-market-button (click)="cancel()" class="ml-2" text="Anuluj"></coin-market-button>
+  </coin-market-modal-card-body>
+</coin-market-modal-card>

@@ -1,0 +1,10 @@
+<nb-card>
+  <nb-card-body *ngIf="user$ | async as user">
+    <div class="user-information">
+      <div class="label">Name</div>
+      <div class="value">{{ user.name }}</div>
+      <div class="label">Email</div>
+      <div class="value">{{ user.email }}</div>
+    </div>
+  </nb-card-body>
+</nb-card>

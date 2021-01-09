@@ -1,0 +1,28 @@
+<div class="header-container">
+  <div class="tittle-logo-container d-flex">
+    <div class="header-menu-bars" (click)="menuExpand.emit()">
+      <nb-icon class="icon" icon="menu-outline"></nb-icon>
+    </div>
+    <div class="header-title" (click)="redirectToDashboard()">
+      <div class="header-title-icon"><i class="fas fa-candy-cane"></i></div>
+      <div class="header-title-text">
+        <div class="header-title-text-1">Candy</div>
+        <div class="header-title-text-2">Shop</div>
+      </div>
+    </div>
+  </div>
+  <div class="right-side">
+    <div class="admin-button">
+
+      <coin-market-button  text="Panel administracyjny" (clickEvent)="openAdminPanel()" *ngIf="isAdmin;">
+      </coin-market-button>
+      <div *ngIf="isUser">
+        <i class="fas fa-shopping-cart card-icon" (click)="openCard()"></i>
+      </div>
+
+
+    </div>
+    <!-- <coin-market-user-menu class="menu"></coin-market-user-menu> -->
+  </div>
+
+</div>

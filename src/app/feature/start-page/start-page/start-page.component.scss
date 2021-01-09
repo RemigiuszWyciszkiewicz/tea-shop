@@ -1,0 +1,167 @@
+.container-fluid {
+  @media (min-width: 1700px) {
+    height: 115%;
+  }
+}
+
+.create-account-info {
+  margin-bottom: 1rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 650px) {
+    margin-bottom: 2rem;
+  }
+
+  .create-account-info-label {
+    font-family: 'Nunito Sans';
+    margin-left: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+
+.title-shop {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid {
+  background-image: url('https://images.unsplash.com/photo-1584543238200-96c253bcd9d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.form-section {
+  margin: 0 auto;
+  margin-top: 6rem;
+  background-color: rgba(0, 0, 0, 0.72);
+  height: 30rem;
+  padding-top: 1rem;
+}
+@media only screen and (max-width: 993px) {
+  .form-section {
+    order: 2;
+  }
+  .information-section {
+    order: 1;
+  }
+}
+
+.information-section {
+  background-image: url('https://images.unsplash.com/photo-1574183878891-e08ec44abc37?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80');
+
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100%;
+  // @media (max-width: 830px) {
+  //   height: 92rem;
+  // }
+  @media (max-width: 650px) {
+    height: 85rem;
+  }
+
+  .background {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.82);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .header-section-1 {
+      color: white;
+
+      @media (max-width: 650px) {
+        font-size: 2.5rem;
+      }
+      text-align: center;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+    .header-section-2 {
+      margin-top: -1.3rem;
+      color: white;
+      text-align: center;
+      font-weight: 300;
+      font-size: 2.8rem;
+
+      @media (max-width: 650px) {
+        margin-top: -1rem;
+        font-size: 2.35rem;
+      }
+    }
+  }
+}
+
+.statements-section {
+  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.label-text {
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-header {
+    color: rgb(255, 255, 255);
+    width: 14.5rem;
+    padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    background-color: rgb(255, 149, 0);
+    text-align: center;
+    border-radius: 2%;
+    font-family: 'Titillium Web';
+  }
+
+  .text {
+    font-family: 'Titillium Web';
+    width: 14.5rem;
+    background-color: rgba(255, 255, 255, 0.161);
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    padding: 0.7rem;
+  }
+}
+
+.supported-coin-section {
+  color: rgb(255, 255, 255);
+  width: 95%;
+  background-color: rgba(255, 255, 255, 0.161);
+
+  min-height: 10rem;
+  padding-bottom: 2rem;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-list-item {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  &-list-item-icon {
+    @media (max-width: 650px) {
+      width: 1.5rem;
+    }
+  }
+}
+
+.loader-container {
+  margin-top: 2.3rem;
+}

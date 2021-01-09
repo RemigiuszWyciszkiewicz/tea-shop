@@ -1,0 +1,20 @@
+.no-data-label {
+  font-family: 'Roboto';
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(128, 128, 128, 0.541);
+}
+
+.delete-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.order-summary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #545555;
+  display: flex;
+  justify-content: flex-end;
+}

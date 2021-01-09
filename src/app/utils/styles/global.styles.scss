@@ -1,0 +1,81 @@
+@import 'src/app/utils/styles/variables.scss';
+
+.btn {
+  border-width: 1px !important;
+  cursor: pointer !important;
+}
+
+.invalid-input {
+  color: rgb(232, 79, 15);
+  padding: 0.2rem 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.value-profit-danger {
+  color: rgb(255, 0, 0);
+}
+
+.value-profit-success {
+  color: rgb(40, 167, 69);
+}
+
+html {
+  font-size: 16px;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
+}
+
+button {
+  cursor: pointer;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.toast-container {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+
+  .toast-success {
+    background-color: $color-primary;
+  }
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+}
+
+.context-menu {
+  border: 2px solid $color-primary;
+}
+
+nb-context-menu {
+  margin-top: 10px;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-item {
+  border-bottom: none !important;
+}
+.menu-item a {
+  font-size: 1.1rem !important;
+}
+
+.user-picture {
+  background-image: url('https://www.investnational.com.au/wp-content/uploads/2016/08/person-stock.png') !important;
+}

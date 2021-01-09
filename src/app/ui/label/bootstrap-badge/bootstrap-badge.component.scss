@@ -1,0 +1,16 @@
+.badge {
+  min-width: 3rem;
+  font-size: 0.9rem;
+  color: white;
+  font-family: 'Roboto';
+}
+
+.interactive {
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}

@@ -1,0 +1,10 @@
+<div class="menu-container">
+  <div
+    class="icon-container"
+    [class.active]="menuItem.title === selectedItem.title"
+    *ngFor="let menuItem of items"
+    (click)="select(menuItem)"
+  >
+    <i class="icon {{ menuItem.icon }}"></i>
+  </div>
+</div>

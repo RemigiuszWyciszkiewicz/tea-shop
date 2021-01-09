@@ -1,0 +1,54 @@
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <!-- login section -->
+
+    <div class="form-section col-lg-3 col-sm-12 col-md-12">
+
+      <div class="title-shop">
+        Sklep z herbatą
+      </div>
+      <div class="form p-4">
+        <coin-market-login-form
+          *ngIf="isLoginFormVisible; else registerForm"
+          [formGroup]="loginFormGroup"
+          (loginFormSubmit)="onSignIn($event)"
+        >
+        </coin-market-login-form>
+
+        <ng-template #registerForm>
+          <coin-market-register-form
+            (registerFormSubmit)="onSignUp($event)"
+            (showLoginForm)="changeForm()"
+            [formGroup]="registerFormGroup"
+          >
+          </coin-market-register-form>
+        </ng-template>
+        <div></div>
+      </div>
+
+      <div class="create-account-info" *ngIf="isLoginFormVisible">
+        <!-- <div class="create-account-info-label">
+          Utwórz konto
+        </div> -->
+        <coin-market-button styleElement="link" class="d-inline" text="Utwórz konto" (clickEvent)="changeForm()">
+        </coin-market-button>
+      </div>
+
+
+
+      <div *ngIf="!isRecaptchaTokenValid && showRecaptchaErrorMessage" class="text-danger">
+        Confirm that you are not a robot!
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+<ng-template #loader>
+  <div class="d-flex justify-content-center align-content-center loader-container">
+    <coin-market-spinner></coin-market-spinner>
+  </div>
+</ng-template>

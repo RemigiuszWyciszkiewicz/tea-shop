@@ -1,0 +1,61 @@
+@import 'src/app/utils/styles/variables.scss';
+
+:host {
+  width: 100%;
+}
+
+nb-menu ::ng-deep {
+  .active {
+    background-color: $color-primary !important;
+    border-radius: 4% !important;
+    .menu-title {
+      color: white;
+    }
+    .menu-icon {
+      color: white !important;
+    }
+  }
+  .menu-item {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    &:hover {
+      transition: 0.2s;
+      border-radius: 4% !important;
+      background-color: lighten($color-primary, 15%);
+      color: white;
+      .menu-title {
+        color: white;
+      }
+      .menu-icon {
+        color: white !important;
+      }
+    }
+  }
+
+  .menu-title {
+    font-family: 'Roboto';
+    &:hover {
+      color: white;
+    }
+  }
+}
+.menu-container {
+  padding: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-side {
+  display: flex;
+}
+
+.card-ap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  color: white;
+}
